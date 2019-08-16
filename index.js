@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const utils = require('loader-utils');
 const deepmerge = require('deepmerge');
 const css_parse = require('css-parse');
 const css_stringify = require('css-stringify');
@@ -24,6 +25,13 @@ function processRules(list, options) {
 module.exports = function (source, options) {
   this.cacheable();
 
+  if (!options && this.query) {
+    if (typeof this.query === 'string') {
+      options = utils.parseQuery(this.query);
+    } else {
+      options = this.query;
+    }
+  }
   options = deepmerge({
     selector: ".css-wrap",
     skip: null
@@ -34,10 +42,10 @@ module.exports = function (source, options) {
   }
 
   if (source) {
-		if (fs.existsSync(path.resolve(source))) {
-			source = fs.readFileSync(source).toString();
-		}
-	}
+    if (fs.existsSync(path.resolve(source))) {
+      source = fs.readFileSync(source).toString();
+    }
+  }
 
   var css = css_parse(source);
   css.stylesheet.rules = processRules(css.stylesheet.rules, options);
