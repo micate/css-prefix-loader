@@ -1,24 +1,27 @@
 {
-  "name": "css-wrap-skip-loader",
-  "version": "1.0.1",
-  "description": "CSS Wrap loader for Webpack with skip option",
+  "name": "css-prefix-loader",
+  "version": "1.0.0",
+  "description": "CSS Prefix loader for Webpack",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wix/css-wrap-skip-loader.git"
+    "url": "git@github.com:micate/css-prefix-loader.git"
   },
   "keywords": [
-    "css-wrap",
+    "css",
+    "prefix",
     "loader"
   ],
-  "author": "Chaowlert Chaisrichalermpol",
+  "author": "micate",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wix/css-wrap-skip-loader/issues"
+    "url": "https://github.com/micate/css-prefix-loader/issues"
   },
-  "homepage": "https://github.com/wix/css-wrap-skip-loader#readme",
+  "homepage": "https://github.com/micate/css-prefix-loader#README",
   "dependencies": {
+    "css-parse": "^2.0.0",
+    "css-stringify": "^2.0.0",
     "css-wrap": "AlexMarvelo/css-wrap#v0.2.0",
-    "loader-utils": "^0.2.16"
+    "deepmerge": "^1.4.4"
   }
 }

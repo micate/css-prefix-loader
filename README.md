@@ -1,5 +1,5 @@
-# css-wrap-loader
-[CSS Wrap](https://github.com/benignware/css-wrap) loader for Webpack
+# css-prefix-loader
+[CSS Prefix](https://github.com/micate/css-prefix-loader) loader for Webpack
 
 ## usage
 
@@ -8,7 +8,7 @@ module: {
     rules: [
         {
             test: /\.css$/,
-            use: 'css-wrap-loader?selector=.wrapper-class'
+            use: 'css-prefix-loader?selector=.wrapper-class'
         }
     ]
 }
