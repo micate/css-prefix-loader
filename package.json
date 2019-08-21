@@ -1,6 +1,6 @@
 {
   "name": "css-prefix-loader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CSS Prefix loader for Webpack",
   "main": "index.js",
   "repository": {
@@ -22,6 +22,6 @@
     "css-parse": "^2.0.0",
     "css-stringify": "^2.0.0",
     "deepmerge": "^1.4.4",
-    "loader-utils": "^1.2.3"
+    "loader-utils": "^0.2.16"
   }
 }
